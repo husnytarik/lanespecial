@@ -8,6 +8,31 @@
   --black: #242423;
   --charcoal: #333533;
 
+  /* ── Opacity variants: Black ── */
+  --black-10: rgba(36, 36, 35, 0.1);
+  --black-35: rgba(36, 36, 35, 0.35);
+  --black-48: rgba(36, 36, 35, 0.48);
+  --black-88: rgba(36, 36, 35, 0.88);
+  --black-92: rgba(36, 36, 35, 0.92);
+  --black-94: rgba(36, 36, 35, 0.94);
+
+  /* ── Opacity variants: Cream ── */
+  --cream-06: rgba(207, 219, 213, 0.06);
+  --cream-07: rgba(207, 219, 213, 0.07);
+  --cream-08: rgba(207, 219, 213, 0.08);
+  --cream-18: rgba(207, 219, 213, 0.18);
+  --cream-20: rgba(207, 219, 213, 0.2);
+  --cream-25: rgba(207, 219, 213, 0.25);
+  --cream-30: rgba(207, 219, 213, 0.3);
+  --cream-38: rgba(207, 219, 213, 0.38);
+  --cream-40: rgba(207, 219, 213, 0.4);
+  --cream-42: rgba(207, 219, 213, 0.42);
+  --cream-50: rgba(207, 219, 213, 0.5);
+  --cream-55: rgba(207, 219, 213, 0.55);
+
+  /* ── Opacity variants: Gold ── */
+  --gold-45: rgba(246, 204, 93, 0.45);
+
   --font-display: "Nexa Bold", sans-serif;
   --font-body: "Nexa Light", sans-serif;
 
@@ -88,10 +113,10 @@ nav {
 }
 
 nav.scrolled {
-  background: rgba(36, 36, 35, 0.94);
+  background: var(--black-94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: rgba(207, 219, 213, 0.08);
+  border-bottom-color: var(--cream-08);
 }
 
 .nav-logo {
@@ -177,7 +202,7 @@ nav.scrolled {
 }
 
 .nav-cta {
-  border: 1px solid rgba(246, 204, 93, 0.45) !important;
+  border: 1px solid var(--gold-45) !important;
   color: var(--gold) !important;
   padding: 10px 22px !important;
   opacity: 1 !important;
@@ -225,9 +250,9 @@ nav.scrolled {
   z-index: 1;
   background: linear-gradient(
     to top,
-    rgba(36, 36, 35, 0.88) 0%,
-    rgba(36, 36, 35, 0.35) 50%,
-    rgba(36, 36, 35, 0.1) 100%
+    var(--black-88) 0%,
+    var(--black-35) 50%,
+    var(--black-10) 100%
   );
 }
 
@@ -261,7 +286,7 @@ nav.scrolled {
   font-size: clamp(0.55rem, 1vw, 0.75rem);
   letter-spacing: 0.5em;
   text-transform: uppercase;
-  color: rgba(207, 219, 213, 0.5);
+  color: var(--cream-50);
   opacity: 0;
   transform: translateY(16px);
   animation: fadeUp 0.9s var(--ease-luxury) 0.75s forwards;
@@ -324,9 +349,9 @@ section {
   font-size: 0.65rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(207, 219, 213, 0.45);
+  color: var(--cream-45);
   text-decoration: none;
-  border-bottom: 1px solid rgba(207, 219, 213, 0.2);
+  border-bottom: 1px solid var(--cream-20);
   padding-bottom: 4px;
   transition:
     color 0.3s,
@@ -425,11 +450,7 @@ section {
   left: 0;
   right: 0;
   padding: 20px 18px;
-  background: linear-gradient(
-    to top,
-    rgba(36, 36, 35, 0.92) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to top, var(--black-92) 0%, transparent 100%);
   transform: translateY(8px);
   opacity: 0;
   transition:
@@ -454,7 +475,7 @@ section {
   font-size: 0.55rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: rgba(207, 219, 213, 0.55);
+  color: var(--cream-55);
   margin-top: 4px;
 }
 
@@ -534,6 +555,15 @@ section {
   display: block;
 }
 
+.passion-block video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.48);
+  display: block;
+}
+
 .passion-overlay {
   position: absolute;
   inset: 0;
@@ -577,7 +607,7 @@ section {
 .passion-desc {
   font-family: var(--font-body);
   font-size: clamp(0.72rem, 0.9vw, 0.85rem);
-  color: rgba(207, 219, 213, 0.5);
+  color: var(--cream-50);
   line-height: 1.8;
   letter-spacing: 0.02em;
 }
@@ -586,7 +616,7 @@ section {
 footer {
   background: var(--charcoal);
   padding: 80px clamp(24px, 5vw, 80px) 0;
-  border-top: 1px solid rgba(207, 219, 213, 0.06);
+  border-top: 1px solid var(--cream-06);
 }
 
 .footer-top {
@@ -634,7 +664,7 @@ footer {
 
 .footer-brand p {
   font-size: 0.78rem;
-  color: rgba(207, 219, 213, 0.38);
+  color: var(--cream-38);
   line-height: 1.85;
   max-width: 240px;
 }
@@ -657,7 +687,7 @@ footer {
 
 .footer-col ul li a {
   font-size: 0.78rem;
-  color: rgba(207, 219, 213, 0.42);
+  color: var(--cream-42);
   text-decoration: none;
   transition: color 0.3s;
   letter-spacing: 0.03em;
@@ -670,7 +700,7 @@ footer {
 /* Contact inline links */
 .footer-contact-line {
   font-size: 0.78rem;
-  color: rgba(207, 219, 213, 0.42);
+  color: var(--cream-42);
   line-height: 2;
   letter-spacing: 0.03em;
 }
@@ -678,7 +708,7 @@ footer {
 .footer-contact-line a {
   color: var(--cream);
   text-decoration: none;
-  border-bottom: 1px solid rgba(207, 219, 213, 0.25);
+  border-bottom: 1px solid var(--cream-25);
   transition:
     color 0.3s,
     border-color 0.3s;
@@ -692,7 +722,7 @@ footer {
 /* Follow us */
 .footer-follow {
   padding: 40px 0;
-  border-top: 1px solid rgba(207, 219, 213, 0.07);
+  border-top: 1px solid var(--cream-07);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -704,7 +734,7 @@ footer {
   font-size: 0.55rem;
   letter-spacing: 0.5em;
   text-transform: uppercase;
-  color: rgba(207, 219, 213, 0.3);
+  color: var(--cream-30);
 }
 
 .footer-social-icons {
@@ -714,7 +744,7 @@ footer {
 }
 
 .footer-social-icons a {
-  color: rgba(207, 219, 213, 0.4);
+  color: var(--cream-40);
   text-decoration: none;
   transition:
     color 0.3s,
@@ -740,7 +770,7 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 24px 0;
-  border-top: 1px solid rgba(207, 219, 213, 0.06);
+  border-top: 1px solid var(--cream-06);
 }
 
 .footer-copy {
@@ -748,7 +778,7 @@ footer {
   font-size: 0.55rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(207, 219, 213, 0.18);
+  color: var(--cream-18);
 }
 
 /* ── Animations ── */
